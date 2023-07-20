@@ -16,7 +16,7 @@ Blockchain technology ensures transparency in every transaction, providing buyer
 ### Getting Started
 To access KraftChain and explore the incredible world of indigenous crafts:
 
-🔗 https://www.kraft-chain.vercel.app
+🔗 kraft-chain.vercel.app
 
 Connect your wallet on the platform.
 Browse through the crafts listed on the platform or list your own creations if you are a craftsman.

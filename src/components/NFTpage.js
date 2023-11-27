@@ -119,6 +119,37 @@ async function buyNFT(tokenId) {
                     </div>
                 </div>
             </div>
+            <div className="max-w-md mx-auto mt-8 p-8 bg-white shadow-lg rounded-md">
+      <div className="flex items-center justify-center mb-6">
+        <h2 className="text-2xl font-semibold text-gray-800">Receiving Address</h2>
+      </div>
+      <form>
+        <div className="mb-4">
+          <label htmlFor="Address" className="block text-gray-600 text-sm font-semibold mb-2">
+            Address
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              id="cardNumber"
+              className="w-full p-3 pl-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <label htmlFor="Address" className="block text-gray-600 text-sm font-semibold mb-2">
+            Contact No:
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              id="Contact Number"
+              className="w-full p-3 pl-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+        
+        
+      </form>
+    </div>
         </div>
     )
 }

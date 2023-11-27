@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import axie from "../tile.jpeg";
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams, Link, } from 'react-router-dom';
 import MarketplaceJSON from "../Marketplace.json";
 import axios from "axios";
 import { useState } from "react";
@@ -69,6 +69,11 @@ async function buyNFT(tokenId) {
     }
 }
 
+
+  const handlePayment = async () => {
+    window.location.href = '/payment';
+  };
+
     const params = useParams();
     const tokenId = params.tokenId;
     if(!dataFetched)
@@ -102,9 +107,13 @@ async function buyNFT(tokenId) {
                     </div>
                     <div>
                     { currAddress != data.owner && currAddress != data.seller ?
-                        <button className="enableEthereumButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy this CRAFT</button>
+                    
+                        <button className="enableEthereumButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy with Crypto</button>
+    
                         : <div className="text-[#2fb1b5]">You are the owner of this NFT</div>
+                    
                     }
+                    <button className="enableButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={handlePayment}>Buy with Fiat</button>
                     
                     <div className="text-green text-center mt-3">{message}</div>
                     </div>

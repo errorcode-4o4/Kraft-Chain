@@ -12,6 +12,7 @@ import SellNFT from './components/SellNFT';
 import Marketplace from './components/Marketplace';
 import Profile from './components/Profile';
 import NFTPage from './components/NFTpage';
+import Payment from './components/payment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +22,8 @@ root.render(
         <Route path="/" element={<Marketplace />}/>
         <Route path="/sellNFT" element={<SellNFT />}/> 
         <Route path="/nftPage/:tokenId" element={<NFTPage />}/>        
-        <Route path="/profile" element={<Profile />}/> 
+        <Route path="/profile" element={<Profile />}/>
+        <Route path="/payment" element={<Payment />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

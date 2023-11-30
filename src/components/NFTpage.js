@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import InformationPage from "./InformationPage";
 import axie from "../tile.jpeg";
 import { useLocation, useParams, Link, } from 'react-router-dom';
 import MarketplaceJSON from "../Marketplace.json";
@@ -70,6 +71,9 @@ async function buyNFT(tokenId) {
 }
 
 
+  // const ship = async () => {
+  //   window.location.href = '/InformationPage';
+  // };
   const handlePayment = async () => {
     window.location.href = '/payment';
   };
@@ -108,8 +112,9 @@ async function buyNFT(tokenId) {
                     <div>
                     { currAddress != data.owner && currAddress != data.seller ?
                     
-                        <button className="enableEthereumButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy with Crypto</button>
-    
+                        // <button className="enableEthereumButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={() => ship()}>Buy this craft</button>
+                        <button className="enableEthereumButton bg-[#296f71] hover:bg-[#2fb1b5] text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy with crypto</button>
+
                         : <div className="text-[#2fb1b5]">You are the owner of this NFT</div>
                     
                     }
@@ -119,37 +124,8 @@ async function buyNFT(tokenId) {
                     </div>
                 </div>
             </div>
-            <div className="max-w-md mx-auto mt-8 p-8 bg-white shadow-lg rounded-md">
-      <div className="flex items-center justify-center mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Receiving Address</h2>
-      </div>
-      <form>
-        <div className="mb-4">
-          <label htmlFor="Address" className="block text-gray-600 text-sm font-semibold mb-2">
-            Address
-          </label>
-          <div className="relative">
-            <input
-              type="text"
-              id="cardNumber"
-              className="w-full p-3 pl-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-            />
-          </div>
-          <label htmlFor="Address" className="block text-gray-600 text-sm font-semibold mb-2">
-            Contact No:
-          </label>
-          <div className="relative">
-            <input
-              type="text"
-              id="Contact Number"
-              className="w-full p-3 pl-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-            />
-          </div>
+          
         </div>
         
-        
-      </form>
-    </div>
-        </div>
     )
 }
